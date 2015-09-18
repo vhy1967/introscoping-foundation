@@ -100,15 +100,7 @@
               <li><a href="article.html" class="button">Статьи</a></li>
               <li><a href="stuff.html" class="button">Материалы</a></li>
               <li><a href="review.html" class="button">Отзывы</a></li>
-              <li><a href="map.html" class="button">Карта</a></li>
-                <!--
-              <li content="index.html" class="button">Главная</li>
-              <li content="service.html" class="button">Услуги</li>
-              <li content="article.html" class="button">Статьи</li>
-              <li content="stuff.html" class="button">Материалы</li>
-              <li content="review.html" class="button">Отзывы</li>
-              <li content="map.html" class="button">Карта</li>
-              -->
+              <li><a href="map.html" class="button" id="mapItem">Карта</a></li>
             </ul>
           </div>
         </div>
@@ -133,16 +125,15 @@
     <script>
       $(document).foundation();
     </script>
+
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#MenuBar').on('click', function (event) {
-                //alert($(event.target).text() + " item has been clicked - " + $(event.target).attr('content'));
-                //var element = event.args;
-                var w = $('#main').width;
-                var h = $('#main').height;
-                $('#main').load($(event.target).attr('content') + ' #main');
-                $('#main').width = w;
-                $('#main').height = h;
+        $('#MenuBar').on('click', 'a', function (event) {
+            var $this = $(this);
+            //alert($this.attr('href') + " item has been clicked");
+            //alert($this.attr('id'));
+            event.preventDefault();
+            $('#main').load($this.attr('href') + ' #main', function(){
+                if($this.attr('id') == 'mapItem') initMap();
             });
         });
     </script>
