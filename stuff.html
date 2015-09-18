@@ -32,7 +32,9 @@
               <!-- Reveal Modals begin -->
               <div id="callModal" class="reveal-modal" data-reveal>
                 <h4>Информация для звонка</h4>
-                <form>
+                <form accept-charset = "utf-8"
+                      METHOD="POST"
+                      ACTION="http://introscoping.ru/cgi-bin/cgiemail/cgiemailtemplates/email_template.txt">
                   <div class="row">
                     <div class="large-3 medium-3 columns">
                       <div class="row collapse">
@@ -41,21 +43,27 @@
                           <span class="prefix">+7</span>
                         </div>
                         <div class="small-9 columns">
-                          <input type="text" placeholder="small-9.columns" />
+                          <input name="required-phonenumber" type="text" placeholder="small-9.columns">
                         </div>
                       </div>
                     </div>
                     <div class="large-3 medium-3 columns">
                       <label>Как к Вам обращаться?</label>
-                      <input type="text" placeholder="large-3.columns" />
+                      <input name="customer_name" type="text" placeholder="large-3.columns">
                     </div>
                     <div class="large-6 medium-6 columns">
                       <label>Кратко о вашем вопросе</label>
-                      <input type="text" placeholder="large-6.columns" />
+                      <input name="customer_text" type="text" placeholder="large-6.columns"/>
                     </div>
                   </div>
+                  <!--<a href="#" data-reveal-id="thanksModal">-->
+                  <input class="submit small secondary button" type="submit" value="OK &hellip;">
+                  <input type="hidden" name="success" value="http://www.introscoping.ru/dev2015/ThankYou.html">
+                  <!--</a>-->
                 </form>
+                <!--
                 <p><a href="#" data-reveal-id="thanksModal" class="small secondary button">OK &hellip;</a></p>
+                -->
                 <a class="close-reveal-modal">&#215;</a>
               </div>
 
@@ -83,7 +91,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div id="main" class="row">
       <div class="large-12 columns">
         <div class="panel">
           <div class="row" style="height: 450px;">
