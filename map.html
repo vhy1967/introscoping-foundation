@@ -59,7 +59,7 @@
                   </div>
                   <!--<a href="#" data-reveal-id="thanksModal">-->
                   <input class="submit small secondary button" type="submit" value="OK &hellip;">
-                  <input type="hidden" name="success" value="http://www.introscoping.ru/dev2015/ThankYou.html">
+                  <input type="hidden" name="success" value="http://www.introscoping.ru/ThankYou.html">
                   <!--</a>-->
                 </form>
                 <!--
@@ -98,46 +98,41 @@
           <h3>На карте представлены объекты, на которых мы работали.</h3>
           <p>Наведите курсор на метку и будет показана информация об объекте/скважине
             (координаты метки могут отличаться от реальных до 300 м по соображениям конфиденциальности)</p>
-          <div class="row" style="height: 450px;">
+          <div class="row" style="height: 450px">
             <div id="map" class="large-12 medium-12 columns" style="width: 90%; height: 90%; left: 5%; top: 10px">
             </div>
-              <script>
-                  var map;
-                  function initMap() {
-                      map = new google.maps.Map(document.getElementById('map'), {
-                          center: {lat: 56.8264, lng: 60.5956},
-                          zoom: 16
-                      });
-
-                      var contentStr = '<div id="content">'+
-                              '<img src="img/intsc-marker.png">'+
-                              '<p>Тут можно накидать всякой инфы, картинок <a href="https://www.reddit.com/r/gifs/">ссылок</a> </p>'+
-
-                              '</div>';
-
-                      var infowindow = new google.maps.InfoWindow({
-                          content: contentStr
-                      });
-
-                      var image = 'img/intsc-marker.png';
-
-                      var marker = new google.maps.Marker({
-                          map: map,
-                          position: {lat: 56.8264, lng: 60.5956},
-                          icon: image,
-                          title: 'Офис и База INTROSCOPING.RU'
-                      });
-                      marker.addListener('click', function() {
-                          infowindow.open(map, marker);
-                      });
-
-                  }
-              </script>
-              <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" defer></script>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 56.8264, lng: 60.5956},
+          zoom: 16
+        });
+        var contentStr = '<div id="content">'+
+            '<img src="img/intsc-marker.png">'+
+            '<p>Тут можно накидать всякой инфы, картинок <a href="https://www.reddit.com/r/gifs/">ссылок</a> </p>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: contentStr
+        });
+        var image = 'img/intsc-marker.png';
+        var marker = new google.maps.Marker({
+          map: map,
+          position: {lat: 56.8264, lng: 60.5956},
+          icon: image,
+          title: 'Офис и База INTROSCOPING.RU'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" defer></script>
 
     <script src="js/foundation.min.js"></script>
     <script>

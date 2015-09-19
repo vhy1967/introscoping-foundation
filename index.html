@@ -12,6 +12,19 @@
     <script src="js/vendor/modernizr.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/jquery.cookie.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31648705-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
   </head>
   <body style="background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),
             url(img/back_grass.jpg); background-repeat: repeat">
@@ -23,7 +36,7 @@
       }
     </script>
 
-    <div class="row">
+    <div id="top" class="row">
       <div class="large-12 columns">
         <div class="panel" style="background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),
             url(img/background_main_top.jpg); background-size: cover">
@@ -67,7 +80,7 @@
                   </div>
                   <!--<a href="#" data-reveal-id="thanksModal">-->
                   <input class="submit small secondary button" type="submit" value="OK &hellip;">
-                  <input type="hidden" name="success" value="http://www.introscoping.ru/dev2015/ThankYou.html">
+                  <input type="hidden" name="success" value="http://www.introscoping.ru/ThankYou.html">
                   <!--</a>-->
                 </form>
                 <!--
@@ -120,37 +133,33 @@
     </script>
 
     <script type="text/javascript">
-        $('#MenuBar').on('click', 'a', function (event) {
-            var $this = $(this);
-            //alert($this.attr('href') + " item has been clicked");
-            //alert($this.attr('id'));
-            event.preventDefault();
-            $('#main').load($this.attr('href') + ' #main', function(){
-                if($this.attr('id') == 'mapItem') initMap();
-            });
+      $('#MenuBar').on('click', 'a', function (event) {
+        var $this = $(this);
+        //alert($this.attr('href') + " item has been clicked");
+        //alert($this.attr('id'));
+        event.preventDefault();
+        $('#main').load($this.attr('href') + ' #main > *', function(){
+        //$.get($this.attr('href'+ ' #main'), function(data){
+          //$("#main").replaceWith($(data).find("#main"));
+          if($this.attr('id') == 'mapItem') initMap();
         });
+      });
     </script>
 
     <script>
         function initMap() {
-            var map;
-            map = new google.maps.Map(document.getElementById('map'), {
+            var map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: 56.8264, lng: 60.5956},
                 zoom: 16
             });
-
             var contentStr = '<div id="content">'+
                     '<img src="img/intsc-marker.png">'+
                     '<p>Тут можно накидать всякой инфы, картинок <a href="https://www.reddit.com/r/gifs/">ссылок</a> </p>'+
-
                     '</div>';
-
             var infowindow = new google.maps.InfoWindow({
                 content: contentStr
             });
-
             var image = 'img/intsc-marker.png';
-
             var marker = new google.maps.Marker({
                 map: map,
                 position: {lat: 56.8264, lng: 60.5956},
@@ -160,7 +169,6 @@
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
             });
-
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>

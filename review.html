@@ -31,7 +31,7 @@
                 <img src="img/phone-wg.png" alt="Заказ звонка" style="height: 25px; width: 30px; padding-right: 5px" /></i>Перезвонить мне</a>
               <!-- Reveal Modals begin -->
 <!--<form METHOD="POST" ACTION="http://introscoping.ru/cgi-bin/cgiecho/cgiemail/email_template.txt">-->
-<!--http://introscoping.ru/cgi-bin/cgiemail/cgiemail/email_template.txt?phonenumber=9222299052&name=_Name&text=_Text-->
+<!--http://introscoping.ru/cgi-bin/cgiemail/cgiemailtemplates/email_template.txt?phonenumber=9222299052&name=_Name&text=_Text-->
                <div id="callModal" class="reveal-modal" data-reveal>
                 <h4>Информация для звонка</h4>
                 <form accept-charset = "utf-8"
@@ -60,7 +60,7 @@
                   </div>
                   <!--<a href="#" data-reveal-id="thanksModal">-->
                   <input class="submit small secondary button" type="submit" value="OK &hellip;">
-                  <input type="hidden" name="success" value="http://www.introscoping.ru/dev2015/ThankYou.html">
+                  <input type="hidden" name="success" value="http://www.introscoping.ru/ThankYou.html">
                   <!--</a>-->
                 </form>
                 <!--
@@ -96,8 +96,8 @@
     <div id="main" class="row">
       <div class="large-12 columns">
         <div class="panel">
-          <h3>На карте представлены объекты, на которых мы работали.</h3>
-          <p>Наведите курсор на метку и будет показана информация об объекте/скважине
+          <h3>Истории наши и наших клиентов</h3>
+          <p>По ссылкам можно перейти к карте и увидеть, в каком месте осуществлялись работы
             (координаты метки могут отличаться от реальных до 300 м по соображениям конфиденциальности)</p>
           <div class="row" style="height: 450px;">
             <div id="map" class="large-12 medium-12 columns" style="width: 90%; height: 90%; left: 5%; top: 10px">
@@ -114,8 +114,6 @@
           center: {lat: 56.8264, lng: 60.5956},
           zoom: 16
         });
-
-
         var marker = new google.maps.Marker({
           map: map,
           position: {lat: 56.8264, lng: 60.5956},
