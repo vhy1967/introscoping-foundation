@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="ftp.introscoping.ru" uploadOnCheckin="bc5e0588-ab97-44de-beca-13f0e98aab1b">
+  <component name="PublishConfigData" serverName="ftp.introscoping.ru">
     <serverData>
       <paths name="ftp.introscoping.ru">
         <serverdata>
@@ -10,6 +10,5 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="introscoping" />
   </component>
 </project>
