@@ -147,29 +147,31 @@
     </script>
 
     <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 56.8264, lng: 60.5956},
-                zoom: 16
-            });
-            var contentStr = '<div id="content">'+
-                    '<img src="img/intsc-marker.png">'+
-                    '<p>Тут можно накидать всякой инфы, картинок <a href="https://www.reddit.com/r/gifs/">ссылок</a> </p>'+
-                    '</div>';
-            var infowindow = new google.maps.InfoWindow({
-                content: contentStr
-            });
-            var image = 'img/intsc-marker.png';
-            var marker = new google.maps.Marker({
-                map: map,
-                position: {lat: 56.8264, lng: 60.5956},
-                icon: image,
-                title: 'Офис и База INTROSCOPING.RU'
-            });
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
-            });
-        }
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 56.8264, lng: 60.5956},
+          zoom: 16
+        });
+        var contentStr = '<div id="content">'+
+          '<img src="img/intsc-marker.png">'+
+          '<p>Офис находится в  <a href="http://www.ursmu.ru/">горном институте</a></p>' +
+          '<p>по адресу: г.Екатеринбург, ул.Куйбышева, 30</p>'+
+          '<p>Телефон эксперта: +79222299052</p>'+
+          '</div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: contentStr
+        });
+        var image = 'img/intsc-marker.png';
+        var marker = new google.maps.Marker({
+          map: map,
+          position: {lat: 56.8264, lng: 60.5956},
+          icon: image,
+          title: 'Офис и База INTROSCOPING.RU'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 

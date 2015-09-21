@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="introscoping" uploadOnCheckin="bc5e0588-ab97-44de-beca-13f0e98aab1b">
+  <component name="PublishConfigData" serverName="ftp.introscoping.ru" uploadOnCheckin="bc5e0588-ab97-44de-beca-13f0e98aab1b">
     <serverData>
-      <paths name="introscoping">
+      <paths name="ftp.introscoping.ru">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
@@ -11,6 +11,5 @@
       </paths>
     </serverData>
     <option name="myUploadOnCheckinName" value="introscoping" />
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
