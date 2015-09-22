@@ -102,7 +102,7 @@
               <a href="#" ><img height="89" src="img/LogoIS090.png" width="116" /></a>
             </div>
           </div>
-          <div id="MenuBar" class="large-12 columns my_menu">
+          <div id="MenuBar" class="large-12 columns"><span class="my_menu">
             <ul class="button-group small-centered">
               <li><a href="index.html" class="button">Главная</a></li>
               <li><a href="service.html" class="button">Услуги</a></li>
@@ -110,7 +110,7 @@
               <li><a href="stuff.html" class="button">Материалы</a></li>
               <li><a href="review.html" class="button">Отзывы</a></li>
               <li><a href="map.html" class="button" id="mapItem">Карта</a></li>
-            </ul>
+            </ul></span>
           </div>
         </div>
       </div>
@@ -120,12 +120,14 @@
       <div class="large-12 columns">
         <div class="panel" style="background-image: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1)),
             url(img/background_main_content_big-w125.jpg); background-size: cover; background-repeat: no-repeat">
-          <div class="row my_menu" style="height: 450px">
+          <span class="my_menu">
+          <div class="row" style="height: 450px">
             <a href="intro.html"><img style="position: absolute; left: 35%; top: 25%" src="img/infographics/information.png"/></a>
             <a href="stuff.html"><img style="position: absolute; left: 25%; top: 50%" src="img/infographics/camera.png"/></a>
             <a href="service.html"><img style="position: absolute; right: 15%; top: 10%" src="img/infographics/question.png"/></a>
             <a href="article.html"><img style="position: absolute; right: 30%; top: 70%" src="img/infographics/file.png"/></a>
           </div>
+          </span>
         </div>
       </div>
     </div>
@@ -136,7 +138,7 @@
     </script>
 
     <script type="text/javascript">
-      $('#MenuBar').on('click', 'a', function (event) {
+      $('.my_menu').on('click', 'a', function (event) {
         var $this = $(this);
         //alert($this.attr('href') + " item has been clicked");
         //alert($this.attr('id'));
