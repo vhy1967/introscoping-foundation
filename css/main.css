@@ -1,3 +1,28 @@
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(/img/back_grass.jpg) repeat;
+}
+
+h5 {
+    font-family: Courier;
+    font-weight: bold;
+    color: #663300;
+}
+
+h6 {
+    font-family: Times, cursive;
+    font-weight: bold;
+    font-size: x-large;
+    font-style: italic;
+    color: #007095;
+}
+
+.header_panel {
+    .panel;
+    background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url(/img/background_main_top.jpg);
+    background-size: cover;
+    padding: 15px;
+}
+
 .my_menu
 {
 }
