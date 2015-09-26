@@ -110,13 +110,46 @@
           <h3>Истории наши и наших клиентов</h3>
           <p>По ссылкам можно перейти к карте и увидеть, в каком месте осуществлялись работы
             (координаты метки могут отличаться от реальных до 300 м по соображениям конфиденциальности)</p>
-          <div class="row" style="height: 450px;">
-            <div id="map" class="large-12 medium-12 columns" style="width: 90%; height: 90%; left: 5%; top: 10px">
-            </div>
+          <div class="row">
+              <form action="/cgi-sys/guestbook.cgi" target=guestwindow>
+                  <input type="hidden" name="user" value="gymsolut">
+                  <input type="hidden" name="action" value="addguest">
+                  <input type="hidden" name="basehref" value="http://introscoping.ru">
+                  <input type="hidden" name="template" value="default">
+                  Имя: <input type="text" name="name"><br>
+                  Email: <input type="text" name="email"><br>
+                  Ссылка на карту: <input type="text" name="url"><br>
+                  Comments: <textarea name="comments"></textarea><br>
+                  <input type="submit" value="Записать отзыв">
+              </form>
+          </div>
+          <div class="row">
+            <object type="text/html" width=100% height="300" data="http://introscoping.ru/cgi-sys/guestbook.cgi?action=listguests&user=gymsolut"></object>
           </div>
         </div>
       </div>
     </div>
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+          <div class="large-4 columns">
+            <p>&copy; Copyright VHY&Co, 2015</p>
+          </div>
+          <div class="large-8 columns my_menu">
+            <ul class="inline-list right">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="service.html">Услуги</a></li>
+              <li><a href="article.html">Статьи</a></li>
+              <li><a href="stuff.html">Материалы</a></li>
+              <li><a href="review.html">Отзывы</a></li>
+              <li><a href="map.html" id="mapItem">Карта</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script>
       var map;
