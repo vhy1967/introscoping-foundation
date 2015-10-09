@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(/img/back_grass.jpg) repeat;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(/img/back_marble.jpg) repeat;
 }
 
 h5 {
@@ -18,11 +18,80 @@ h6 {
 
 .header_panel {
     .panel;
-    background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url(/img/background_main_top.jpg);
-    background-size: cover;
+    /*background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url(/img/background_main_top.jpg);
+    background-size: cover;*/
+    background: transparent;
     padding: 15px;
 }
 
 .my_menu
 {
+}
+
+.string{
+    width:100%;
+    height:30px;
+    margin:10px auto;
+    line-height:28px;
+    padding: 0 10px;
+    border-radius:4px;
+    box-shadow:0 1px 2px #777;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    background: rgb(238,238,238);
+    background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1)));
+    background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+    background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+    background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+}
+
+#titles
+{
+    position: absolute;
+    width: 18em;
+    height: 42em;
+    bottom: 0;
+    left: 50%;
+    margin-left: -9em;
+    font-size: 350%;
+    font-weight: bold;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
+}
+
+#titles:after
+{
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+#titlecontent
+{
+    position: absolute;
+    top: 100%;
+    -webkit-animation: scroll 100s linear 4s infinite;
+    -moz-animation: scroll 100s linear 4s infinite;
+    -ms-animation: scroll 100s linear 4s infinite;
+    -o-animation: scroll 100s linear 4s infinite;
+    animation: scroll 100s linear 4s infinite;
+}
+
+@keyframes scroll {
+    0% { top: 100%; }
+    100% { top: -170%; }
 }

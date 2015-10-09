@@ -24,22 +24,21 @@
   </head>
   <body>
 
-    <div class="row">
+    <div id="top" class="row">
       <div class="large-12 columns">
         <div class="header_panel">
           <div class="row">
-            <div class="large-6 medium-6 columns">
-              <a href="index.html" ><h1 style="font-weight: bold; color: #663300; font-size: 315%">INTROSCOPING.RU</h1></a>
-              <h6 style="float: left">Свяжитесь с нами</h6>
-              <br />
-              <h6 style="float: right">и мы Вам поможем!</h6>
+            <div class="large-7 medium-7 columns">
+              <a href="#" ><img src="img/header0.png" width="100%" height="auto" alt="introscoping.ru" style="padding-left: 15px" /></a>
             </div>
-            <div class="large-4 medium-4 columns">
-              <h5 style="float: right">+7 922 22 99 052</h5>
-              <h5 style="float: right">+7 965 503 82 84</h5>
-              <a href="#" data-reveal-id="callModal" onclick="_gaq.push(['_trackEvent', 'callback request button', 'clicked'])"
-                 class="tiny button box-icon success round small-centered" style="float: right">
-                <img src="img/phone-wg.png" alt="Заказ звонка" style="height: 25px; width: 30px; padding-right: 5px" /></i>Перезвонить мне</a>
+            <div class="large-3 medium-3 columns">
+              <div class="row" style="float: right">
+                <h5>+7(922)2299052</h5>
+                <h5>+7(965)5038284</h5>
+                <a href="#" data-reveal-id="callModal" onclick="_gaq.push(['_trackEvent', 'callback request button', 'clicked'])"
+                   class="tiny button box-icon success round small-centered" style="float: right">
+                  <img src="img/phone-wg.png" alt="Заказ звонка" style="height: 25px; width: 30px; padding-right: 5px" />Заказать звонок</a>
+              </div>
               <!-- Reveal Modals begin -->
               <div id="callModal" class="reveal-modal" data-reveal>
                 <h4>Информация для звонка</h4>
@@ -68,7 +67,8 @@
                     </div>
                   </div>
                   <!--<a href="#" data-reveal-id="thanksModal">-->
-                  <input class="submit small secondary button" type="submit" value="OK &hellip;">
+                  <input class="submit small secondary button" onclick="_gaq.push(['_trackEvent', 'callback submit button', 'clicked'])"
+                         type="submit" value="OK &hellip;">
                   <input type="hidden" name="success" value="http://www.introscoping.ru/ThankYou.html">
                   <!--</a>-->
                 </form>
@@ -84,11 +84,11 @@
                 <a class="close-reveal-modal">&#215;</a>
               </div>
             </div>
-            <div class="large-2 medium-2 columns">
-              <a href="#" ><img height="89" src="img/LogoIS090.png" width="116" /></a>
+            <div class="large-2 medium-2 columns right">
+              <a href="#" ><img style="padding: 5px" height="89" src="img/LogoIS090.png" width="116" alt="introscoping.ru" /></a>
             </div>
           </div>
-          <div class="large-12 columns">
+          <div id="MenuBar" class="large-12 columns my_menu">
             <ul class="button-group small-centered">
               <li><a href="index.html" class="button">Главная</a></li>
               <li><a href="service.html" class="button">Услуги</a></li>
@@ -130,7 +130,7 @@
               <li><a href="article.html">Статьи</a></li>
               <li><a href="stuff.html">Материалы</a></li>
               <li><a href="review.html">Отзывы</a></li>
-              <li><a href="map.html" id="mapItem">Карта</a></li>
+              <li><a href="#">Карта</a></li>
             </ul>
           </div>
         </div>

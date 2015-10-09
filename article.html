@@ -21,27 +21,42 @@
       ga('create', 'UA-31648705-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#display").click(function() {
+          $.ajax({    //create an ajax request to load_page.php
+            type: "GET",
+            url: "db/get_articles.php",
+            dataType: "html",   //expect html to be returned
+            success: function(response){
+              $("#responsecontainer").html(response);
+              //alert(response);
+            }
+          });
+        });
+      });
+    </script>
   </head>
   <body>
 
-    <div class="row">
+    <div id="top" class="row">
       <div class="large-12 columns">
         <div class="header_panel">
           <div class="row">
-            <div class="large-6 medium-6 columns">
-              <a href="index.html" ><h1 style="font-weight: bold; color: #663300; font-size: 315%">INTROSCOPING.RU</h1></a>
-              <h6 style="float: left">Свяжитесь с нами</h6>
-              <br />
-              <h6 style="float: right">и мы Вам поможем!</h6>
+            <div class="large-7 medium-7 columns">
+              <a href="#" ><img src="img/header0.png" width="100%" height="auto" alt="introscoping.ru" style="padding-left: 15px" /></a>
             </div>
-            <div class="large-4 medium-4 columns">
-              <h5 style="float: right">+7 922 22 99 052</h5>
-              <h5 style="float: right">+7 965 503 82 84</h5>
-              <a href="#" data-reveal-id="callModal" onclick="_gaq.push(['_trackEvent', 'callback request button', 'clicked'])"
-                 class="tiny button box-icon success round small-centered" style="float: right">
-                <img src="img/phone-wg.png" alt="Заказ звонка" style="height: 25px; width: 30px; padding-right: 5px" /></i>Перезвонить мне</a>
+            <div class="large-3 medium-3 columns">
+              <div class="row" style="float: right">
+                <h5>+7(922)2299052</h5>
+                <h5>+7(965)5038284</h5>
+                <a href="#" data-reveal-id="callModal" onclick="_gaq.push(['_trackEvent', 'callback request button', 'clicked'])"
+                   class="tiny button box-icon success round small-centered" style="float: right">
+                  <img src="img/phone-wg.png" alt="Заказ звонка" style="height: 25px; width: 30px; padding-right: 5px" />Заказать звонок</a>
+              </div>
               <!-- Reveal Modals begin -->
-               <div id="callModal" class="reveal-modal" data-reveal>
+              <div id="callModal" class="reveal-modal" data-reveal>
                 <h4>Информация для звонка</h4>
                 <form accept-charset = "utf-8"
                       METHOD="POST"
@@ -68,7 +83,8 @@
                     </div>
                   </div>
                   <!--<a href="#" data-reveal-id="thanksModal">-->
-                  <input class="submit small secondary button" type="submit" value="OK &hellip;">
+                  <input class="submit small secondary button" onclick="_gaq.push(['_trackEvent', 'callback submit button', 'clicked'])"
+                         type="submit" value="OK &hellip;">
                   <input type="hidden" name="success" value="http://www.introscoping.ru/ThankYou.html">
                   <!--</a>-->
                 </form>
@@ -84,18 +100,18 @@
                 <a class="close-reveal-modal">&#215;</a>
               </div>
             </div>
-            <div class="large-2 medium-2 columns">
-              <a href="#" ><img height="89" src="img/LogoIS090.png" width="116" /></a>
+            <div class="large-2 medium-2 columns right">
+              <a href="#" ><img style="padding: 5px" height="89" src="img/LogoIS090.png" width="116" alt="introscoping.ru" /></a>
             </div>
           </div>
-          <div class="large-12 columns">
+          <div id="MenuBar" class="large-12 columns my_menu">
             <ul class="button-group small-centered">
-              <li><a href="index.html" class="button">Главная</a></li>
-              <li><a href="service.html" class="button">Услуги</a></li>
-              <li><a href="#" class="button">Статьи</a></li>
-              <li><a href="stuff.html" class="button">Материалы</a></li>
-              <li><a href="review.html" class="button">Отзывы</a></li>
-              <li><a href="map.html" class="button">Карта</a></li>
+                <li><a href="index.html" class="button">Главная</a></li>
+                <li><a href="service.html" class="button">Услуги и цены</a></li>
+                <li><a href="#" class="button">Статьи</a></li>
+                <li><a href="stuff.html" class="button">Материалы</a></li>
+                <li><a href="review.html" class="button">Отзывы</a></li>
+                <li><a href="map.html" class="button">Карта</a></li>
             </ul>
           </div>
         </div>
@@ -106,58 +122,17 @@
       <div class="large-12 columns">
         <div class="panel">
           <div class="row">
-            <h4><strong>Для любого человека очень важно качество воды, которую он употребляет, поскольку от этого напрямую зависит его здоровье. Очень удобным и распространенным способом получения качественной питьевой воды для жителей загородных домов является <i><b>скважина</b></i> для личного использования. Мы работаем для тех, у кого скважина уже есть (возможно необходим ее ремонт, восстановление).</strong></h4>
-
-            <p><b>Бурение скважины или ремонт скважины?</b> &mdash; вопрос, который только на первый взгляд может показаться простым. Очевидно, что цена бурения новой скважины будет больше, чем ремонта скважины. Стоит учесть также, что бурение гидроскважин без соблюдения всех необходимых правил, норм и требований технологии производства буровых работ может привести к нежелательным последствиям.</p>
-
-            <p><b>Видеокаротаж (теледиагностика, обследование)</b> &mdash; наблюдение за происходящим на глубине, внутри скважин, при помощи видеокамеры и монитора. Полученные фото и видеоматериалы высокого качества, что позволяет увидеть малейшие повреждения на стенах труб.</p>
-
-            <p>Как правило, при возникновении проблем с гидроскважиной, бурильщики предлагают пробурить новую скважину. Подход вполне понятен: неизвестно состояние забоя (дна) скважины, неизвестно каким диаметром заканчивается ваша скважина, неизвестно есть ли в скважине посторонние предметы, неизвестно качество установки и длина обсадной колонны. Немаловажную роль играет и материальная составляющая. Средние цены на бурение скважин на воду сложились следующие:</p>
-
-            <a name="price"></a>
-            <ul>
-              <li>Бурение - 1100 руб./м</li>
-              <li>Стальная обсадная труба - 900 руб./м</li>
-              <li>Полиэтиленовая обсадная труба - 500 руб./м</li>
-            </ul>
-            <br />
-            На бурение 30 м новой скважины затраты примерно такие:
-            <table>
-              <tbody>
+            <table border="1" align="center">
               <tr>
-                <td>Бурение</td>
-                <td></td>
-                <td>30х1100=33000 руб.</td>
-                <td></td>
+                <td> <input type="button" id="display" value="Display All Data" /> </td>
               </tr>
-              <tr>
-                <td>Стальная обсадная труба</td>
-                <td></td>
-                <td>15х900=13500 руб.</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Полиэтиленовая обсадная труба</td>
-                <td></td>
-                <td>30х500=15000 руб.</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Итого</td>
-                <td></td>
-                <td>61500 руб.</td>
-                <td></td>
-              </tr>
-              </tbody>
             </table>
-            <br />
-            Теледиагностика позволяет определить источник проблем с Вашей скважиной, и найти адекватные, бюджетные пути и способы ремонта скважины.<br />
-            Стоимость теледиагностики - 5500 руб.<br />
-            (Если скважина на расстоянии до 50км от города, глубиной - до 50м. Для больших расстояний и глубин затраты немного выше.)
-            <p></p>
+            <div id="responsecontainer" align="center"></div>
 
-            <p>Мы выполняем работы в Свердловской, Челябинской, Пермской областях</p>
-
+            <h4><strong>Для любого человека очень важно качество воды, которую он употребляет, поскольку от этого напрямую зависит его здоровье. Очень удобным и распространенным способом получения качественной питьевой воды для жителей загородных домов является <i><b>скважина</b></i> для личного использования. Мы работаем для тех, у кого скважина уже есть (возможно необходим ее ремонт, восстановление).</strong></h4>
+            <p><b>Бурение скважины или ремонт скважины?</b> &mdash; вопрос, который только на первый взгляд может показаться простым. Очевидно, что цена бурения новой скважины будет больше, чем ремонта скважины. Стоит учесть также, что бурение гидроскважин без соблюдения всех необходимых правил, норм и требований технологии производства буровых работ может привести к нежелательным последствиям.</p>
+            <p><b>Видеокаротаж (теледиагностика, обследование)</b> &mdash; наблюдение за происходящим на глубине, внутри скважин, при помощи видеокамеры и монитора. Полученные фото и видеоматериалы высокого качества, что позволяет увидеть малейшие повреждения на стенах труб.</p>
+            <p>Как правило, при возникновении проблем с гидроскважиной, бурильщики предлагают пробурить новую скважину. Подход вполне понятен: неизвестно состояние забоя (дна) скважины, неизвестно каким диаметром заканчивается ваша скважина, неизвестно есть ли в скважине посторонние предметы, неизвестно качество установки и длина обсадной колонны. Немаловажную роль играет и материальная составляющая.</p>
             <p><b>Цели теледиагностики:</b></p>
             1. Контроль качества выполненных буровых работ<br />
             2. Диагностика проблем в буровой скважине<br />
@@ -182,7 +157,7 @@
           <div class="large-8 columns my_menu">
             <ul class="inline-list right">
               <li><a href="index.html">Главная</a></li>
-              <li><a href="service.html">Услуги</a></li>
+              <li><a href="service.html">Услуги и цены</a></li>
               <li><a href="article.html">Статьи</a></li>
               <li><a href="stuff.html">Материалы</a></li>
               <li><a href="review.html">Отзывы</a></li>
