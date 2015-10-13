@@ -17,11 +17,17 @@ h6 {
 }
 
 .header_panel {
-    .panel;
+.panel;
     /*background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url(/img/background_main_top.jpg);
     background-size: cover;*/
     background: transparent;
     padding: 15px;
+}
+
+.content_panel {
+.panel;
+    background-size: cover;
+    background: url(/img/background_main_content_lake.jpg) no-repeat;
 }
 
 .my_menu
@@ -51,17 +57,17 @@ h6 {
 #titles
 {
     position: absolute;
-    width: 18em;
-    height: 42em;
-    bottom: 0;
+    width: 14.2em;
+    height: 15.7em;
+    bottom: 0em;
     left: 50%;
-    margin-left: -9em;
-    font-size: 350%;
+    margin-left: -7.7em;
+    font-size: 400%;
     font-weight: bold;
     text-align: justify;
     overflow: hidden;
     transform-origin: 50% 100%;
-    transform: perspective(300px) rotateX(25deg);
+    transform: perspective(300px) rotateX(20deg);
 }
 
 #titles:after
